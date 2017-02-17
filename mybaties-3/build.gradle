@@ -1,0 +1,22 @@
+group 'org.springframework'
+version '4.2.5.RELEASE'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    optional("ognl:ognl:3.1.8")
+    optional("org.slf4j:slf4j-log4j12:1.7.21")
+    optional("log4j:log4j:1.2.17")
+    optional("org.apache.logging.log4j:log4j-core:2.3")
+    optional("commons-logging:commons-logging:1.2")
+    optional("cglib:cglib:3.2.3")
+    
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

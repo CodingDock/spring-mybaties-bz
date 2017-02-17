@@ -1,0 +1,47 @@
+group 'org.springframework'
+version '4.2.5.RELEASE'
+
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    optional(project(":spring-core"))
+    optional(project(":spring-aop"))
+    optional(project(":spring-jdbc"))
+    optional(project(":spring-oxm"))
+    optional(project(":spring-web"))
+    optional(project(":spring-beans"))
+    optional(project(":spring-context"))
+    optional(project(":spring-jms"))
+    optional(project(":spring-webmvc"))
+    optional(project(":spring-test"))
+
+    optional(project(":mybaties-3"))
+    optional(project(":mybaties-spring"))
+
+    optional("ognl:ognl:3.1.8")
+    optional("com.alibaba:druid:1.0.9")
+    optional("mysql:mysql-connector-java:5.1.25")
+    optional("aopalliance:aopalliance:1.0")
+    optional("org.aspectj:aspectjweaver:1.6.0")
+    optional("commons-pool:commons-pool:1.5.6")
+    optional("commons-lang:commons-lang:2.3")
+    optional("org.apache.commons:commons-pool2:2.0")
+    optional("commons-io:commons-io:1.4")
+    optional("javassist:javassist:3.8.0.GA")
+    optional("com.alibaba:fastjson:1.2.7")
+    optional("org.slf4j:slf4j-api:1.6.0")
+    optional("ch.qos.logback:logback-core:0.9.28")
+    optional("ch.qos.logback:logback-classic:0.9.28")
+    optional("com.google.guava:guava:19.0")
+    optional("junit:junit:4.10")
+    optional("commons-fileupload:commons-fileupload:1.3.1")
+    optional("asm:asm:3.3.1")
+    optional("org.apache.tomcat:servlet-api:6.0.13")
+
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
